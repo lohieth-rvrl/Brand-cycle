@@ -1,0 +1,75 @@
+import React from "react";
+import { Navbar, Nav, Container, Carousel, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
+const App = () => {
+  return (
+    <>
+      {/* Sticky Navbar */}
+      <Navbar bg="light" expand="lg" fixed="top">
+        <Container>
+          <Navbar.Brand href="#home">Brand Cycle</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      {/* Hero Section */}
+      <div className="hero-section text-center">
+        <h1 className="hero-text">Brand Cycle</h1>
+      </div>
+
+      {/* Featured Products Carousel */}
+      <Container className="mt-5">
+        <Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/images/product1.jpg" alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/images/product2.jpg" alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/images/product3.jpg" alt="Third slide" />
+          </Carousel.Item>
+        </Carousel>
+      </Container>
+
+      {/* Products Section */}
+      <Container className="text-center mt-5">
+        <h2>Discover Products</h2>
+        <div className="product-grid">
+          <div className="product">
+            <img src="/images/product1.jpg" alt="Product 1" />
+            <p>$99</p>
+            <Button variant="primary">BUY</Button>
+          </div>
+          <div className="product">
+            <img src="/images/product2.jpg" alt="Product 2" />
+            <p>$99</p>
+            <Button variant="primary">BUY</Button>
+          </div>
+          <div className="product">
+            <img src="/images/product3.jpg" alt="Product 3" />
+            <p>$99</p>
+            <Button variant="primary">BUY</Button>
+          </div>
+        </div>
+      </Container>
+
+      {/* Call-to-Action Section */}
+      <div className="cta-section text-center">
+        <p>Check for latest collection 👕</p>
+        <a href="#shop" className="shop-more">Shop More</a>
+      </div>
+    </>
+  );
+};
+
+export default App;
